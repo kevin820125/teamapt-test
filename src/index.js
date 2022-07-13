@@ -1,16 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { createRoot } from 'react-dom/client';
 
-// tailwindcss
-import './index.css';
+import App from 'App';
+import * as serviceWorker from 'serviceWorker';
 
-ReactDOM.render(
+import 'index.css';
+
+const root = createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
 
 // If you want your app to work offline and load faster, you can change
